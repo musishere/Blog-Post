@@ -22,4 +22,9 @@ type Post struct {
 	ReactionCount int64     `gorm:"default:0" json:"reaction_count"`
 	CreatedAt     time.Time `json:"created_at"`
 	UpdatedAt     time.Time `json:"updated_at"`
+
+	// Relation
+	Comments  []Comment  `gorm:"foreignKey:PostID" json:"comments"`
+	Tags      []Tag      `gorm:"many2many:post_tags" json:"tags"`
+	Reactions []Reaction `gorm:"foreignKey:PostID" json:"reactions"`
 }
