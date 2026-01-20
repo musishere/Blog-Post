@@ -19,7 +19,7 @@ type User struct {
 	UpdatedAt   time.Time `json:"updated_at"`
 
 	// Relations
-	Posts     []Post     `gorm:"foreignKey:AuthorID" json:"Posts,omitempty"`
-	Comments  []Comment  `gorm:"foreignKey:UserID" json:"comments"`
-	Reactions []Reaction `gorm:"foreignKey:UserID" json:"reacts"`
+	// Posts     []Post     `gorm:"foreignKey:AuthorID" json:"Posts,omitempty"`
+	// Comments  []Comment  `gorm:"foreignKey:UserID" json:"comments"`
+	// Reactions []Reaction `gorm:"foreignKey:UserID" json:"reacts"`
 }
