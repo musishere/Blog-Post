@@ -14,5 +14,5 @@ type Tag struct {
 	UpdatedAt time.Time `json:"updated_at"`
 
 	// Relations
-	Posts []Post `gorm:"many2many" json:"post_tags"`
+	// Posts []Post `gorm:"many2many" json:"post_tags"`
 }

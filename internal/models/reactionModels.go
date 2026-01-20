@@ -16,6 +16,6 @@ type Reaction struct {
 
 	// Relations
 
-	Posts Post `gorm:"foreignKey:PostID" json:"post"`
-	User  User `gorm:"foreignKey:UserID" json:"user"`
+	// Posts Post `gorm:"foreignKey:PostID" json:"post"`
+	// User  User `gorm:"foreignKey:UserID" json:"user"`
 }
