@@ -51,4 +51,17 @@ func ValidateJsonWebToken(tokenStr string) (*Claims, error) {
 	if tokenStr == "" {
 		return nil, errors.New("Token is empty")
 	}
+
+	claims := &Claims{}
+
+	_, err := jwt.ParseWithClaims(tokenStr, claims, func(t *jwt.Token) (interface{}, error) {
+		return jwtSecret, nil
+	})
+
+	if err != nil {
+		return nil, err
+	}
+
+	return claims, nil
+
 }
