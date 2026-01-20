@@ -23,11 +23,13 @@ func LoadEnvironmentVariables() *AppConfig {
 	}
 
 	return &AppConfig{
-		DBName: getEnviromentVaiables("DB_NAME", "Blog"),
-		DBPort: getEnviromentVaiables("DB_PORT", "5432"),
-		DBUser: getEnviromentVaiables("DB_User", "postgres"),
-		DBHost: getEnviromentVaiables("DB_HOSt", "localost"),
-		DBPass: getEnviromentVaiables("DB_PASS", "postgres"),
+		ServerPort: getEnviromentVaiables("SERVER_PORT", "8080"),
+		DBName:     getEnviromentVaiables("DB_NAME", "Blog"),
+		DBPort:     getEnviromentVaiables("DB_PORT", "5432"),
+		DBUser:     getEnviromentVaiables("DB_User", "postgres"),
+		DBHost:     getEnviromentVaiables("DB_HOSt", "localost"),
+		DBPass:     getEnviromentVaiables("DB_PASS", "postgres"),
+		JWTSecret:  getEnviromentVaiables("JWT_SECRET", "kskkkkskkkskk@@@@12kkas12@23331"),
 	}
 }
 
